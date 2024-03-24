@@ -1,0 +1,7 @@
+.test {
+    background-image: url(../../../assets/pic/b.png), linear-gradient(rgba(201, 138, 64, 0.7), rgba(201, 138, 64, 0.7));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

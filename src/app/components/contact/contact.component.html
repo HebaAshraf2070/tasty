@@ -1,0 +1,33 @@
+<section class="vh-100">
+    <div class="row d-flex justify-content-center align-items-center">
+        <h2 class="display-1 fw-bold color text-center my-5">contact us</h2>
+        <div class="col col-12 col-md-6">
+            <form [formGroup]="sendform" (ngSubmit)="handleForm()">
+                <input type="text" class="form-control my-3 mx-auto " placeholder="Full Name" formControlName="name"
+                    #inputname>
+                <div class="alert alert-danger"
+                    *ngIf="sendform.get('name')?.errors && (sendform.get('name')?.touched || inputname.value.length > 0)">
+                    <p *ngIf="sendform.get('name')?.getError('required')">Name is required</p>
+                    <p *ngIf="sendform.get('name')?.getError('minlength')">Name length should be more than 3 letters</p>
+                    <p *ngIf="sendform.get('name')?.getError('maxlength')">Name length should be less than 30 letters
+                    </p>
+                </div>
+                <input type="email" class="form-control my-3" placeholder="E-mail" formControlName="email" #inputemail>
+                <div class="alert alert-danger"
+                    *ngIf="sendform.get('email')?.errors && (sendform.get('email')?.touched || inputemail.value.length > 0)">
+                    <p *ngIf="sendform.get('email')?.getError('required')">Email is required</p>
+                    <p *ngIf="sendform.get('email')?.getError('email')">Invalid email</p>
+                </div>
+                <input type="tel" class="form-control my-3" placeholder="Phone number" formControlName="phone"
+                    #inputphone>
+                <div class="alert alert-danger"
+                    *ngIf="sendform.get('phone')?.errors && (sendform.get('phone')?.touched || inputphone.value.length > 0)">
+                    <p *ngIf="sendform.get('phone')?.getError('required')">Phone is required</p>
+                    <p *ngIf="sendform.get('phone')?.getError('pattern')">Invalid phone number</p>
+                </div>
+                <button class="btn btn-outline-warning d-block ms-auto px-5" [disabled]="sendform.invalid">Send</button>
+
+            </form>
+        </div>
+    </div>
+</section>

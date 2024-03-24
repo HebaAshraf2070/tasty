@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.bg-color {
+    background: rgba(201, 138, 64, 1);
+
+}
+
+.color {
+    color: rgba(201, 138, 64, 1);
+}
+
+.bg-img {
+    background-image: url("../../app/src/assets/pic/b.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.full-heigth {
+    height: 100vh;
+}
+
+.min-width {
+    max-width: 40%;
+}
+
+li {
+    list-style: none;
+}
+
+.full-width {
+    width: 100%;
+}
