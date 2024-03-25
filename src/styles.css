@@ -15,7 +15,7 @@
 }
 
 .bg-img {
-    background-image: url("../../app/src/assets/pic/b.png");
+    background-image: url("./assets/pic/b.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
